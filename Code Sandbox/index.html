@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Code Sandbox</title>
+    <!-- Link to our custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4 md:p-8 flex flex-col h-screen bg-gray-900 text-gray-200">
+
+    <div class="flex justify-between items-center mb-6">
+        <h1 class="text-3xl font-bold">Code Sandbox</h1>
+        <div class="flex space-x-2">
+            <button id="save-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Save</button>
+            <button id="reset-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">Reset</button>
+        </div>
+    </div>
+    
+    <p class="text-gray-400 mb-6">Write HTML, CSS, and JavaScript and see the output instantly below. Your code is automatically saved to your browser's local storage.</p>
+    
+    <!-- Code Editor Panels -->
+    <div class="flex flex-col md:flex-row flex-grow gap-4 mb-4">
+        
+        <!-- HTML Panel -->
+        <div class="flex flex-col flex-1">
+            <label for="html-code" class="text-lg font-semibold mb-2 text-orange-400">HTML</label>
+            <textarea id="html-code" class="flex-grow p-4 rounded-lg border-2" placeholder="<!-- Write your HTML here -->"></textarea>
+        </div>
+        
+        <!-- CSS Panel -->
+        <div class="flex flex-col flex-1">
+            <label for="css-code" class="text-lg font-semibold mb-2 text-blue-400">CSS</label>
+            <textarea id="css-code" class="flex-grow p-4 rounded-lg border-2" placeholder="/* Write your CSS here */"></textarea>
+        </div>
+        
+        <!-- JavaScript Panel -->
+        <div class="flex flex-col flex-1">
+            <label for="js-code" class="text-lg font-semibold mb-2 text-yellow-400">JavaScript</label>
+            <textarea id="js-code" class="flex-grow p-4 rounded-lg border-2" placeholder="// Write your JavaScript here"></textarea>
+        </div>
+    </div>
+    
+    <!-- Output Panel -->
+    <div class="flex flex-col flex-grow">
+        <label class="text-lg font-semibold mb-2">Output</label>
+        <iframe id="output" class="flex-grow rounded-lg border-2 output-panel"></iframe>
+    </div>
+
+    <!-- Custom Modal for Notifications -->
+    <div id="notification-modal" class="modal fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-70 z-50 hidden">
+        <div class="modal-content bg-gray-800 p-6 rounded-lg shadow-xl text-center max-w-sm w-full">
+            <p id="modal-message" class="text-white text-lg font-semibold mb-4"></p>
+            <button id="modal-close-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">OK</button>
+        </div>
+    </div>
+
+    <!-- Link to our custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
