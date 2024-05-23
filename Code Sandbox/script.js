@@ -128,4 +128,7 @@ const defaultCss = `body {\n  font-family: sans-serif;\n  color: #333;\n}`;
 const defaultJs = `console.log("Welcome to the Code Sandbox!");`;
 
 function runCode() {
-    const html = htmlCode.value;
+    const html = htmlCode.value;
+    const css = cssCode.value;
+    const js = jsCode.value;
+
