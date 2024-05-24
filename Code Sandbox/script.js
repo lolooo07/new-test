@@ -131,4 +131,7 @@ function runCode() {
     const html = htmlCode.value;
     const css = cssCode.value;
     const js = jsCode.value;
-
+
+    const fullCode = `
+        <!DOCTYPE html>
+        <html>
