@@ -137,4 +137,7 @@ function runCode() {
         <html>
         <head>
             <style>${css}</style>
-        </head>
+        </head>
+        <body>
+            ${html}
+            <script>${js}<\/script>
