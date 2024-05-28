@@ -158,4 +158,7 @@ function saveCode() {
     } catch (e) {
         showNotification('Error saving code. Please check browser settings.', true);
         console.error("Could not save to localStorage", e);
-    }
+    }
+}
+
+
