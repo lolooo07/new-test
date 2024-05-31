@@ -170,4 +170,7 @@ function loadCode() {
     // If there's saved code, use it. Otherwise, use the defaults.
     htmlCode.value = savedHtml || defaultHtml;
     cssCode.value = savedCss || defaultCss;
-    jsCode.value = savedJs || defaultJs;
+    jsCode.value = savedJs || defaultJs;
+
+    runCode(); // Run the code after loading
+}
